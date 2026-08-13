@@ -27,4 +27,7 @@
   <% end %>
 </div>
 
-<%= link_to "New project", new_project_path %>
+<%# ログイン中（管理者）のみ新規作成ボタンを表示 %>
+<% if user_signed_in? %>
+  <%= link_to "新規プロジェクト作成", new_project_path %>
+<% end %>
