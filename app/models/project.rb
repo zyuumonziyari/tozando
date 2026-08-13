@@ -12,7 +12,7 @@ class Project < ApplicationRecord
   ].freeze
 
   has_one_attached :image
-  
+
   # バリデーション（必須項目チェック）
   validates :title, presence: true
   validates :area, presence: true, inclusion: { in: AREAS }
