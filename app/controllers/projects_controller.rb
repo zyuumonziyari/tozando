@@ -4,6 +4,10 @@ class ProjectsController < ApplicationController
   # GET /projects or /projects.json
   def index
     @projects = Project.all
+    # 選択されたエリアがあれば絞り込み（空文字や未選択でなければ実行）
+    if params[:area].present?
+      @projects = @projects.where(area: params[:area])
+    end
   end
 
   # GET /projects/1 or /projects/1.json
