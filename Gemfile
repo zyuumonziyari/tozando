@@ -59,3 +59,9 @@ group :test do
 end
 
 gem "devise"
+
+# Rails標準の日本語化（モデル名やエラーメッセージ）
+gem 'rails-i18n'
+
+# Devise用のメッセージ日本語化
+gem 'devise-i18n'
