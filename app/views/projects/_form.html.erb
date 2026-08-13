@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <div style="margin-bottom: 1rem;">
+    <%= form.label :image, "プロジェクト画像" %>
+    <%= form.file_field :image, accept: "image/*" %>
+  </div>
+  
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
