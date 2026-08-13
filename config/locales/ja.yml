@@ -1,0 +1,16 @@
+# config/locales/ja.yml
+ja:
+  activerecord:
+    models:
+      user: "ユーザー"
+      project: "プロジェクト"
+    attributes:
+      user:
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード（確認用）"
+      project:
+        title: "タイトル"
+        description: "説明"
+        area: "エリア"
+        event_date: "活動日"
