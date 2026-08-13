@@ -18,8 +18,7 @@
 
   <div>
     <%= form.label :area, style: "display: block" %>
-    <%= form.text_field :area %>
-  </div>
+    <%= form.select :area, Project::AREAS, { prompt: "エリアを選択してください" } %>  </div>
 
   <div>
     <%= form.label :event_date, style: "display: block" %>
