@@ -17,5 +17,9 @@ Rails.application.routes.draw do
   # Topページ（http://localhost:3000/）にアクセスしたら募集一覧を表示
   root "projects#index"
   # Projectの標準7アクション（index, show, new, create, edit, update, destroy）のルートを自動生成
-  resources :projects
+  resources :projects do
+    member do
+      get :apply
+    end
+  end
 end
