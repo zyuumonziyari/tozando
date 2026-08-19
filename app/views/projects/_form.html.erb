@@ -34,6 +34,11 @@
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description %>
   </div>
+  
+  <div style="margin-bottom: 1rem;">
+    <%= form.label :apply_url, "応募先・詳細URL", style: "display: block; font-weight: bold; margin-bottom: 0.5rem;" %>
+    <%= form.url_field :apply_url, placeholder: "https://example.com/apply", style: "width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" %>
+  </div>
 
   <div>
     <%= form.submit %>
