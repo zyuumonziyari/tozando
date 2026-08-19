@@ -62,6 +62,18 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def apply
+    @project = Project.find(params[:id])
+    
+    # 外部URLが登録されている場合のみカウントアップして転送
+    if @project.apply_url.present?
+      @project.increment!(:clicks_count)
+      redirect_to @project.apply_url, allow_other_host: true
+    else
+      redirect_to project_path(@project), alert: "応募先URLが設定されていません。"
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
